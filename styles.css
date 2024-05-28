@@ -1,0 +1,184 @@
+*{
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: hsl(216, 54%, 11%);
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* MAIN CLASSES */
+  .container {
+    background-color: hsl(216, 50%, 16%);
+    min-height: 70vh;
+    width: 20vw;
+    padding: 15px 0px 0px 0px;
+    border-radius: 10px;
+    box-shadow: 10px 25px hsla(217, 57%, 0%, 0.1), -10px 25px hsla(217, 57%, 0%, 0.1);
+  }
+  .equilibrium {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .equilibrium img {
+    max-height: 100%;
+    max-width: 87%;
+    border-radius: 10px;
+  } 
+  .info {
+    padding: 5px 15px 5px 15px;
+  }
+  .extrainfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid hsla(215, 51%, 70%, 0.2);
+  }
+  .creation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .creation p {
+    font-size: 12.5px;
+    margin-left: 10px;
+  }
+
+  /* SUB CLASSES */
+  .clockspace {
+    margin-left: 70px;
+  }
+  .daysleft {
+    margin-left: 5px;
+  }
+  .ethspace {
+    margin-right: 5px;
+  }
+  .space {
+    margin-left: 2px;
+  }
+  .big {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  /* FONT SIZES */
+  h1 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  /* FONT WEIGHTS */
+  h1 {
+    font-weight: 600;
+  }
+  p {
+    font-weight: 300;
+  }
+
+  /* COLORS */ 
+  .white {
+    color: white;
+  }
+  .whitesmoke {
+    color: whitesmoke;
+  }
+  .softblue {
+    color: hsl(215, 51%, 70%);
+    opacity: 0.7;
+  }
+  .cyan {
+    color: hsl(178, 100%, 50%);
+  }
+
+  /* HOVER STATES */
+  .info h1:hover, .jules:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+  }
+  .equilibrium::after {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    justify-content: center;
+    width: 87%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5); 
+    border-radius: 10px;
+    background-image: url("images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 37px 37px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .equilibrium:hover::after {
+    opacity: 1;
+  }
+
+  /* ATTRIBUTION CLASSES */
+  .attribution {
+    font-size: 11px; 
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%); 
+  }
+
+  /* MEDIA QUERIES */
+  @media (max-width: 1440px) { /* For Large Laptop screens */
+    .container {
+      min-height: 25vh;
+    }
+    .clockspace {
+    margin-left: 81px;
+  }
+  }
+  @media (max-width: 1024px) { /* For laptop screens */
+    .container {
+      min-height: 30vh;
+    }
+    .clockspace {
+    margin-left: 35px;
+    }
+    h1 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 11px;
+    }
+    .big {
+      font-size: 12px;
+    }
+    .creation p {
+    font-size: 11px;
+    }
+  }
+  @media (max-width: 768) { /* For Tablets */
+    .container {
+      min-height: 30px;
+      width: 30vw;
+    }
+    h1 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 10px;
+    }
+    .big {
+      font-size: 11px;
+    }
+    .creation p {
+    font-size: 2px;
+    }
+  }
